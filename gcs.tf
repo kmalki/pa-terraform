@@ -9,4 +9,3 @@ resource "google_storage_bucket" "project_bucket" {
   location = var.region
   storage_class = each.value.class
 }
-
