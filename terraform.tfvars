@@ -1,4 +1,4 @@
-project_id = "projet-annuel-309416"
+project_id = "projetannuel-309416"
 
 buckets = {
   "test" = {name = "test-bucket", class = "STANDARD"}
