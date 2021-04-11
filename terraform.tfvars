@@ -7,6 +7,6 @@ buckets = {
 firestore = {
   name = "firestore-main",
   tier = "STANDARD",
-  file_share = {name = "share-main", capacity = 1024},
+  file_share = {name = "share_main", capacity = 1024},
   network = {network = "default", modes = ["MODE_IPV4"]}
 }
