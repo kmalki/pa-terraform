@@ -1,4 +1,5 @@
 resource "google_filestore_instance" "instance" {
+  project = var.project_id
   name = var.firestore.name
   zone = var.zone
   tier = var.firestore.tier
