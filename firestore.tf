@@ -1,3 +1,4 @@
+/*
 resource "google_filestore_instance" "instance" {
   project = var.project_id
   name = var.firestore.name
@@ -13,4 +14,4 @@ resource "google_filestore_instance" "instance" {
     network = var.firestore.network.network
     modes   = var.firestore.network.modes
   }
-}
+}*/
