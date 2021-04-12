@@ -9,3 +9,20 @@ variable "buckets" {
     class = string
   }))
 }
+
+variable "topic" {
+  type = map(object ({
+    name = string
+  }))
+}
+
+variable "dataproc" {
+  type = map(object ({
+    name = string
+    vm = string
+    disk_type = string
+    disk_size = number
+    num_instances_worker = number
+    num_instances_master = number
+  }))
+}
