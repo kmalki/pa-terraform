@@ -1,14 +1,8 @@
 # ------- Buckets ------- #
 # -- Buckets configuration --
 
-resource "google_pubsub_topic" "topic-dataproc" {
-  for_each = var.topicd
-  project = var.project_id
-  name = "${var.project_id}-${each.value.name}"
-}
-
-resource "google_pubsub_topic" "topic-firestore" {
-  for_each = var.topicf
+resource "google_pubsub_topic" "project_topic" {
+  for_each = var.topic
   project = var.project_id
   name = "${var.project_id}-${each.value.name}"
 }

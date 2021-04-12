@@ -4,10 +4,12 @@ buckets = {
   "test" = {name = "test-bucket", class = "STANDARD"}
 }
 
-topicd = {
-  "test" = {name = "topic-dataproc"}
+topic = {
+  "dataproc" = {name = "topic-dataproc"}
+  "firestore" = {name = "topic-firestore"}
 }
 
-topicf = {
-  "test" = {name = "topic-firestore"}
+
+dataproc = {
+  "dataproc" = {name = "dataproc" ,"vm" = "f1-micro", "disk_type" = "pd-standard", "disk_size" = 10, "num_instances_worker" = 2 , "num_instances_master" = 1}
 }
