@@ -9,6 +9,9 @@ resource "google_dataproc_cluster" "project_dataproc" {
   region = var.region
 
  cluster_config {
+ gce_cluster_config {
+      zone = var.zone
+    }
     master_config {
       num_instances = each.value.num_instances_master
       machine_type  = each.value.vm
