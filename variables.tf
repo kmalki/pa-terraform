@@ -9,18 +9,3 @@ variable "buckets" {
     class = string
   }))
 }
-
-variable "firestore" {
-  type = object({
-    name = string
-    tier = string
-    file_share = object({
-      name = string
-      capacity = number
-    })
-    network = object({
-      network = string
-      modes = list(string)
-    })
-  })
-}
