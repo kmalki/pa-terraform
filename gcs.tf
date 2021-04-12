@@ -1,6 +1,6 @@
 
 # ------- Buckets ------- #
-# -- PubSub configuration --
+# -- Buckets configuration --
 
 resource "google_storage_bucket" "project_bucket" {
   for_each = var.buckets

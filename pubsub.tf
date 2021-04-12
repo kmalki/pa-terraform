@@ -1,5 +1,5 @@
 # ------- Buckets ------- #
-# -- Buckets configuration --
+# -- PubSub configuration --
 
 resource "google_pubsub_topic" "project_topic" {
   for_each = var.topic
