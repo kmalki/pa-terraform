@@ -11,5 +11,5 @@ topic = {
 
 
 dataproc = {
-  "dataproc" = {name = "dataproc" ,"vm" = "f1-micro", "disk_type" = "pd-standard", "disk_size" = 10, "num_instances_worker" = 2 , "num_instances_master" = 1}
+  "dataproc" = {name = "dataproc" ,"vm" = "f1-micro", "disk_type" = "pd-standard", "disk_size" = 30, "num_instances_worker" = 2 , "num_instances_master" = 1}
 }
