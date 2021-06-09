@@ -2,6 +2,9 @@ variable "project_id" {}
 variable region {default = "europe-west1"}
 variable zone {default = "europe-west1-b"}
 
+variable bq_region {default = "EU"}
+
+
 # Cloud storage
 variable "buckets" {
   type = map(object ({
@@ -24,5 +27,23 @@ variable "dataproc" {
     disk_size = number
     num_instances_worker = number
     num_instances_master = number
+  }))
+}
+
+variable "datasets" {
+  type = map(object({
+    name = string
+    description = string
+  }))
+}
+
+variable "date_partition_tables" {
+  type = map(object({
+    name = string
+    dataset = string
+    schema = string
+    partition_field = string
+    require_partition_filter = bool
+    clustering = list(string)
   }))
 }
