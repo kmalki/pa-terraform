@@ -2,7 +2,7 @@
 # -- dataproc configuration --
 
 
-resource "google_dataproc_cluster" "project_dataproc" {
+/*resource "google_dataproc_cluster" "project_dataproc" {
   for_each = var.dataproc
   project = var.project_id
   name = each.value.name
@@ -30,4 +30,4 @@ resource "google_dataproc_cluster" "project_dataproc" {
       }
     }
   }
-}
+}*/
