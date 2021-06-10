@@ -4,11 +4,6 @@
     "mode": "NULLABLE"
 },
 {
-    "name": "siteName",
-    "type": "STRING",
-    "mode": "NULLABLE"
-},
-{
     "name": "roomId",
     "type": "STRING",
     "mode": "NULLABLE"
