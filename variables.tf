@@ -37,6 +37,20 @@ variable "datasets" {
   }))
 }
 
+variable "composer" {
+  type = map(object({
+    name = string
+    machine_type = string
+  }))
+}
+
+variable "service_account_composer" {
+  type = map(object ({
+   account_id = string
+   display_name = string
+  }))
+}
+
 variable "date_partition_tables" {
   type = map(object({
     name = string

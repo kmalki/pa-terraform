@@ -21,3 +21,11 @@ date_partition_tables = {
 datasets = {
  flexges = {"name" = "bqd_flexges", description = ""}
 }
+
+composer = {
+ composer = {"name" = "composer", machine_type = "f1-micro"}
+}
+
+service_account_composer = {
+ service_account_composer = {"account_id" = "composer-env-account", display_name = "Test Service Account for Composer Environment"}
+}
