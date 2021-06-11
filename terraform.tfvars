@@ -23,9 +23,8 @@ datasets = {
 }
 
 composer = {
- composer = {"name" = "composer", machine_type = "f1-micro"}
+ composer = {"name" = "composer", "machine" = "f1-micro"}
 }
 
-service_account_composer = {
- service_account_composer = {"account_id" = "composer-env-account", display_name = "Test Service Account for Composer Environment"}
-}
+service_account_composer = {account_id = "composer-env-account", display_name = "Test Service Account for Composer Environment"}
+service_account_dataflow = {account_id = "dataflow-env-account", display_name = "Test Service Account for dataflow Environment"}

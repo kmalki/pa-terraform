@@ -20,7 +20,7 @@ variable "topic" {
 }
 
 variable "dataproc" {
-  type = map(object ({
+  type = map(object({
     name = string
     vm = string
     disk_type = string
@@ -40,15 +40,22 @@ variable "datasets" {
 variable "composer" {
   type = map(object({
     name = string
-    machine_type = string
+    machine = string
   }))
 }
 
 variable "service_account_composer" {
-  type = map(object ({
+  type = object({
    account_id = string
    display_name = string
-  }))
+  })
+}
+
+variable "service_account_dataflow" {
+  type = object({
+   account_id = string
+   display_name = string
+  })
 }
 
 variable "date_partition_tables" {
