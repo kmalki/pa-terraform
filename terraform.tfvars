@@ -23,8 +23,8 @@ datasets = {
 }
 
 composer = {
- composer = {"name" = "composer", "machine" = "f1-micro"}
+ composer = {"name" = "composer", "machine" = "n1-standard-1", "node" = 3 ,  "core-store_serialized_dags" = "True","core-min_serialized_dag_update_interval" = 30,"core-store_dag_code" = "True","scheduler-dag_dir_list_interval" = 30,"disk_size_gb" = 20,"composer_image_version" = "composer-1.14.2-airflow-1.10.14","composer_python_version" = "3"}
 }
 
-service_account_composer = {account_id = "composer-env-account", display_name = "Test Service Account for Composer Environment"}
-service_account_dataflow = {account_id = "dataflow-env-account", display_name = "Test Service Account for dataflow Environment"}
+service_account_composer = {account_id = "composer", display_name = "Service Account for Composer Environment"}
+service_account_dataflow = {account_id = "dataflow", display_name = "Service Account for dataflow Environment"}
