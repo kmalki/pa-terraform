@@ -41,6 +41,14 @@ variable "composer" {
   type = map(object({
     name = string
     machine = string
+    node = number
+    core-store_serialized_dags = string
+    core-min_serialized_dag_update_interval = number
+    core-store_dag_code = string
+    scheduler-dag_dir_list_interval = number
+    disk_size_gb = number
+    composer_image_version = string
+    composer_python_version = string
   }))
 }
 
