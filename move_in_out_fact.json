@@ -9,6 +9,11 @@
     "mode": "NULLABLE"
 },
 {
+    "name": "roomName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+},
+{
     "name": "actionDate",
     "type": "TIMESTAMP",
     "mode": "NULLABLE"
