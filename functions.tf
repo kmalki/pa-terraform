@@ -37,6 +37,7 @@ resource "google_cloudfunctions_function" "function_pubsub_firestore" {
   source_archive_bucket = "${var.project_id}-${var.buckets["functions-sources"].name}"
   source_archive_object = google_storage_bucket_object.function_pubsub_firestore_sources.name
   service_account_email = google_service_account.service_account_functions.email
+  entry_point = "functionpubsubfirestore"
 
   event_trigger {
     event_type = var.pubsub_firestore_function.event_type
