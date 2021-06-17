@@ -19,7 +19,7 @@ data "archive_file" "zip_sources" {
 resource "google_storage_bucket_object" "function_pubsub_firestore_sources" {
   depends_on = [google_storage_bucket.project_bucket]
   name = "${var.pubsub_firestore_function.name}-${data.archive_file.zip_sources.output_md5}.zip"
-  source = "${var.pubsub_firestore_function.source}-${data.archive_file.zip_sources.output_md5}.zip"
+  source = "${var.pubsub_firestore_function.source}.zip"
   bucket = "${var.project_id}-${var.buckets["functions-sources"].name}"
 }
 
