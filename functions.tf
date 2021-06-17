@@ -45,6 +45,6 @@ resource "google_cloudfunctions_function" "function_pubsub_firestore" {
   }
 
   environment_variables = {
-    project = var.project_id
+    GCLOUD_PROJECT = var.project_id
   }
 }
