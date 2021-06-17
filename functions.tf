@@ -43,4 +43,8 @@ resource "google_cloudfunctions_function" "function_pubsub_firestore" {
     event_type = var.pubsub_firestore_function.event_type
     resource = google_pubsub_topic.project_topic.id
   }
+
+  environment_variables = {
+    project = var.project_id
+  }
 }
