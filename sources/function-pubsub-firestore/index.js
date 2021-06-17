@@ -7,13 +7,14 @@
 //   response.send("Hello from Firebase!");
 // });
 
-const functions = import("firebase-functions"),
-    admin = import("firebase-admin");
+const functions = require("firebase-functions"),
+    PubSub = require(`@google-cloud/pubsub`),
+    admin = require("firebase-admin");
 
 const app = admin.initializeApp();
 const firestore = app.firestore();
 
-const FieldValue = admin.firestore.FieldValue;
+const FieldValue = require('firebase-admin').firestore.FieldValue;
 
 firestore.settings({ timestampsInSnapshots: true });
 
