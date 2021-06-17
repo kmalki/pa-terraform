@@ -1,7 +1,3 @@
-locals{
-  timestamp = timestamp()
-}
-
 resource "google_service_account" "service_account_functions" {
   project = var.project_id
   account_id   = var.service_account_functions.account_id
@@ -17,13 +13,13 @@ resource "google_project_iam_member" "functions_access" {
 data "archive_file" "zip_sources" {
   type = "zip"
   source_dir = var.pubsub_firestore_function.source
-  output_path = "${var.pubsub_firestore_function.source}-${local.timestamp}.zip"
+  output_path = "${var.pubsub_firestore_function.source}.zip"
 }
 
 resource "google_storage_bucket_object" "function_pubsub_firestore_sources" {
   depends_on = [google_storage_bucket.project_bucket]
-  name = "${var.pubsub_firestore_function.name}-${local.timestamp}.zip"
-  source = "${var.pubsub_firestore_function.source}-${local.timestamp}.zip"
+  name = "${var.pubsub_firestore_function.name}-${data.archive_file.zip_sources.output_md5}.zip"
+  source = "${var.pubsub_firestore_function.source}-${data.archive_file.zip_sources.output_md5}.zip"
   bucket = "${var.project_id}-${var.buckets["functions-sources"].name}"
 }
 
