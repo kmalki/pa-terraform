@@ -20,7 +20,7 @@ firestore.settings({ timestampsInSnapshots: true });
 
 const roomsRef = firestore.collection("rooms");
 
-exports.countRoom = functions.region('europe-west1').pubsub.topic("projetannuel-309416-topic-firestore").onPublish(async (message) => {
+exports.functionpubsubfirestore = functions.region('europe-west1').pubsub.topic("projetannuel-309416-topic-firestore").onPublish(async (message) => {
     const roomName = message.attributes.roomName;
     const roomId = message.attributes.roomId;
     const enterpriseName = message.attributes.enterpriseName;
