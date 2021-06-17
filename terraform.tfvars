@@ -2,12 +2,11 @@ project_id = "projetannuel-309416"
 
 buckets = {
   "test" = {name = "test-bucket", class = "STANDARD"}
+  "dataflow-temp" = {name = "dataflow-temp", class = "STANDARD"}
+  "functions-sources" = {name = "functions-sources", class = "STANDARD"}
 }
 
-topic = {
-  "dataproc" = {name = "topic-dataproc"}
-  "firestore" = {name = "topic-firestore"}
-}
+firestore_topic = {name = "topic-firestore"}
 
 
 dataproc = {
@@ -28,3 +27,6 @@ composer = {
 
 service_account_composer = {account_id = "composer", display_name = "Service Account for Composer Environment"}
 service_account_dataflow = {account_id = "dataflow", display_name = "Service Account for dataflow Environment"}
+service_account_functions = {account_id = "functions", display_name = "Service Account for Cloud Functions Environment"}
+
+pubsub_firestore_function = {name = "function-pubsub-firestore", source = "sources/function-pubsub-firestore", description = "GCF to process pubsub message to firestore", event_type = "google.pubsub.topic.publish"}

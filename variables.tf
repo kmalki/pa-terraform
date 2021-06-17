@@ -13,10 +13,10 @@ variable "buckets" {
   }))
 }
 
-variable "topic" {
-  type = map(object ({
+variable "firestore_topic" {
+  type = object ({
     name = string
-  }))
+  })
 }
 
 variable "dataproc" {
@@ -66,6 +66,13 @@ variable "service_account_dataflow" {
   })
 }
 
+variable "service_account_functions" {
+  type = object({
+    account_id = string
+    display_name = string
+  })
+}
+
 variable "date_partition_tables" {
   type = map(object({
     name = string
@@ -75,4 +82,13 @@ variable "date_partition_tables" {
     require_partition_filter = bool
     clustering = list(string)
   }))
+}
+
+variable "pubsub_firestore_function" {
+  type = object({
+    name = string
+    source = string
+    description = string
+    event_type = string
+  })
 }
