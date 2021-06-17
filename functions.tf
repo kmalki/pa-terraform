@@ -31,6 +31,8 @@ resource "google_cloudfunctions_function" "function_pubsub_firestore" {
   depends_on = [google_storage_bucket_object.function_pubsub_firestore_sources,
                 google_service_account.service_account_functions]
 
+  project = var.project_id
+
   name = var.pubsub_firestore_function.name
   description = var.pubsub_firestore_function.description
   runtime = "nodejs12"
