@@ -22,4 +22,9 @@
     "name": "email",
     "type": "STRING",
     "mode": "NULLABLE"
+},
+{
+    "name": "insertDate",
+    "type": "TIMESTAMP",
+    "mode": "NULLABLE"
 }]
