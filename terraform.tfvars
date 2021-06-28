@@ -14,7 +14,7 @@ dataproc = {
 }
 
 date_partition_tables = {
-  move_in_out= {name = "move_in_out_fact", dataset = "bqd_flexges", schema = "move_in_out_fact.json", partition_field = "actionDate", require_partition_filter = true, clustering = []}, 
+  move_in_out= {name = "move_in_out_fact", dataset = "bqd_flexges", schema = "move_in_out_fact.json", partition_field = "actionDate", require_partition_filter = false, clustering = []},
 }
 
 datasets = {
