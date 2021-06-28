@@ -38,7 +38,7 @@ variable "datasets" {
 }
 
 variable "composer" {
-  type = map(object({
+  type = object({
     name = string
     machine = string
     node = number
@@ -49,7 +49,7 @@ variable "composer" {
     disk_size_gb = number
     composer_image_version = string
     composer_python_version = string
-  }))
+  })
 }
 
 variable "service_account_composer" {
