@@ -1,15 +1,10 @@
 [{
-    "name": "enterpriseName",
+    "name": "enterpriseId",
     "type": "STRING",
     "mode": "NULLABLE"
 },
 {
     "name": "roomId",
-    "type": "STRING",
-    "mode": "NULLABLE"
-},
-{
-    "name": "roomName",
     "type": "STRING",
     "mode": "NULLABLE"
 },
