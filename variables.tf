@@ -73,6 +73,13 @@ variable "service_account_functions" {
   })
 }
 
+variable "service_account_pubsub" {
+  type = object({
+    account_id = string
+    display_name = string
+  })
+}
+
 variable "date_partition_tables" {
   type = map(object({
     name = string

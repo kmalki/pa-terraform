@@ -26,5 +26,6 @@ composer = {"name" = "composer", "machine" = "n1-standard-1", "node" = 3 ,  "cor
 service_account_composer = {account_id = "composer", display_name = "Service Account for Composer Environment"}
 service_account_dataflow = {account_id = "dataflow", display_name = "Service Account for dataflow Environment"}
 service_account_functions = {account_id = "functions", display_name = "Service Account for Cloud Functions Environment"}
+service_account_pubsub = {account_id = "user-pubsub", display_name = "Service Account for App User Pubsub Environment"}
 
 pubsub_firestore_function = {name = "function-pubsub-firestore", source = "sources/function-pubsub-firestore", description = "GCF to process pubsub message to firestore", event_type = "google.pubsub.topic.publish"}
