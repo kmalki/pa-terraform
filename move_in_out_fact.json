@@ -27,4 +27,15 @@
     "name": "insertDate",
     "type": "TIMESTAMP",
     "mode": "NULLABLE"
-}]
+},
+{
+    "name": "roomName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+},
+{
+    "name": "enterpriseName",
+    "type": "STRING",
+    "mode": "NULLABLE"
+}
+]
